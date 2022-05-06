@@ -7,12 +7,14 @@ load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECRET_KEY = os.getenv('SECRET_KEY')
-SECRET_KEY = 'p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs'
+# SECRET_KEY = 'p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs'
 # SECRET_KEY = os.environ.get('SECRET_KEY', default=get_random_secret_key())
+SECRET_KEY = os.getenv('SECRET_KEY', default='-z)zkjpql$3qyc@f2mny*l=e!=gj6s4f6$1mdjb@byd)dgdb(t')
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = os.getenv('HOSTS', default='127.0.0.1').split(' ')
+# ALLOWED_HOSTS = os.getenv('HOSTS', default='127.0.0.1').split(' ')
+ALLOWED_HOSTS = ['*']
 
 
 INSTALLED_APPS = [
@@ -28,6 +30,7 @@ INSTALLED_APPS = [
     'django_filters',
     'reviews',
     'api',
+    # 'api_yamdb',
 ]
 
 MIDDLEWARE = [
@@ -100,7 +103,6 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
