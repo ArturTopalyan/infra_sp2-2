@@ -84,3 +84,6 @@ docker-compose exec web python manage.py migrate --noinput
 
 Останавливаем и удаляем контейнеры, сети, тома и образы:
 ```docker-compose down -v```
+
+### Автор: *Марецкий Е.*
+*https://github.com/emarpoint*

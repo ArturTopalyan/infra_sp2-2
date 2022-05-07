@@ -1,6 +1,5 @@
 
 from api_yamdb import settings
-from api_yamdb import urls
 
 class TestSettings:
 
